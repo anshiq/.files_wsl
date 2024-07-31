@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Check if a file path is provided
+if [ $# -eq 0 ]; then
+    echo "Please provide the path to the Java file as an argument."
+    exit 1
+fi
+
+# Get the file path from the argument
+file_path="$1"
+
+# Check if the file exists
+if [ ! -f "$file_path" ]; then
+    echo "File not found: $file_path"
+    exit 1
+fi
+
+# Extract the file name without extension
+file_name=$(basename "$file_path" .java)
+
+# Compile the Java file
+javac "$file_path"
+
+# Check if compilation was successful
+if [ $? -eq 0 ]; then
+    echo "Compilation successful. Running the program..."
+    
+    # Run the Java program
+    java -cp "$(dirname "$file_path")" "$file_name"
+else
+    echo "Compilation failed."
+fi

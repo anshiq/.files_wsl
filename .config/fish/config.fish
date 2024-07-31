@@ -52,6 +52,6 @@ if test -f ~/.config/fish/local.fish
 end
 
 
-if not set -q VSCODE_SHELL
-    cd /mnt/c/Users/anshi/OneDrive/Desktop
-end
+# if not set -q VSCODE_SHELL
+#     cd /mnt/c/Users/anshi/OneDrive/Desktop
+# end
