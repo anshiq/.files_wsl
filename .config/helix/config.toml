@@ -20,3 +20,8 @@ display-messages = true
 
 [keys.select]
 "C-[" = ["normal_mode", "keep_primary_selection", "collapse_selection"]
+
+[keys.normal]
+a = "move_char_left"
+C-p = ":clipboard-paste-replace"
+C-y = ":clipboard-yank"
