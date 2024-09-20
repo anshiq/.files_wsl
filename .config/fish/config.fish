@@ -9,6 +9,7 @@ fish_add_path $HOME/.bin
 
 # Local bin directory
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.rvm/bin
 
 # Go
 set -gx GOPATH $HOME/.go
